@@ -6,4 +6,11 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://discovery:8761/eureka/
+      defaultZone: http://192.168.157.131:8761/eureka/
+      
+search:
+  path: /var/index
+  
+logging:
+  path: /var/logs
+  file: searchserver.log  
