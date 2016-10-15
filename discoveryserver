@@ -1,1 +1,26 @@
 
+debug: true
+
+logging:
+  path: /var/logs
+  file: searchserver.log
+
+---
+spring:
+  profiles: peer1
+eureka:
+  instance:
+    hostname: 192.168.157.132
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.157.133:8761/eureka/
+
+---
+spring:
+  profiles: peer2
+eureka:
+  instance:
+    hostname: 192.168.157.133
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.157.132:8761/eureka/
