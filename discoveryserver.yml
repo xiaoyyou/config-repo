@@ -1,11 +1,12 @@
 debug: true
 server:
-  port:8761
+  port: 8761
 
 eureka:
   instance:
-    hostname: 127.0.0.1
+    hostname: localhost
   client:
+    registerWithEureka: false
+    fetchRegistry: false
     serviceUrl:
-      defaultZone: http://127.0.0.1:8761/eureka/
-
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
