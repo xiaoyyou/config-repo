@@ -9,7 +9,7 @@ eureka:
       defaultZone: http://discovery:8761/eureka/
       
 search:
-  path: /var/index
+  path: C:\\index
   
 logging:
   path: /var/logs
