@@ -1,0 +1,32 @@
+# Server settings
+server:
+    port:9080
+
+# DATASOURCE
+spring:
+    datasource:
+        name: datasource
+        url: jdbc:mysql://192.168.254.32:3306/prod1
+        username: root
+        password: otomall
+        # 使用druid数据源
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        filters: stat
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
+
+# LOGGING
+logging:
+    level:
+       com.ibatis:DEBUG
