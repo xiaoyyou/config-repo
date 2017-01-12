@@ -4,7 +4,7 @@ server:
 eureka:
   instance:
     metadata-map:
-      cluster=PRODSERVICE
+      cluster: PRODSERVICE
   client:
     registerWithEureka: true
     fetchRegistry: true
