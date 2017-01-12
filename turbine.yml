@@ -1,0 +1,23 @@
+server:
+  port: 7777
+spring:
+  application:
+    name: turbine
+
+logging:
+  level:
+    org.springframework.cloud: 'INFO'
+
+turbine:
+  aggregator:
+    clusterConfig: PRODSERVICE
+  appConfig: prod-service
+  clusterNameExpression: metadata['cluster']
+
+# Discovery Server Access
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:30761/eureka/
