@@ -2,6 +2,9 @@ server:
   port: 9080
   
 eureka:
+  instance:
+    metadata-map:
+      cluster=PRODSERVICE
   client:
     registerWithEureka: true
     fetchRegistry: true
