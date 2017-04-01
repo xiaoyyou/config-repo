@@ -18,7 +18,6 @@ spring:
         url: jdbc:mysql://192.168.254.32:8066/PROD
         username: root
         password: otomall
-        # 使用druid数据源
         type: com.zaxxer.hikari.HikariDataSource
         driverClassName: com.mysql.jdbc.Driver
         filters: stat
